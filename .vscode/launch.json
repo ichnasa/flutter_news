@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "News App - Chrome",
+      "request": "launch",
+      "type": "dart",
+      "deviceId": "chrome",
+      "args": ["--dart-define-from-file=config/env.json"]
+    },
+    {
+      "name": "News App - Android",
+      "request": "launch",
+      "type": "dart",
+      "deviceId": "android",
+      "args": ["--dart-define-from-file=config/env.json"]
+    }
+  ]
+}

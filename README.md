@@ -55,15 +55,26 @@ flutter build web --release --dart-define-from-file=config/env.json
 flutter build apk --debug --dart-define-from-file=config/env.json
 ```
 
-Hasil terakhir: `flutter analyze` tanpa issue, 31 test lulus, build web release
+Hasil terakhir: `flutter analyze` tanpa issue, 33 test lulus, build web release
 berhasil, dan APK debug berhasil dibangun. Detail pengujian ada di `TESTING.md`.
 
 ## Screenshot
 
-- `screenshots/home_data.png` — daftar berita dari API.
-- `screenshots/error_api_key_salah.png` — HTTP 401.
-- `screenshots/error_tidak_ada_koneksi.png` — gagal koneksi/DNS.
-- `screenshots/error_konfigurasi_kosong.png` — config belum diisi.
+### Daftar berita dari API
+
+![Daftar berita](screenshots/home_data.png)
+
+### Error API key salah (HTTP 401)
+
+![Error API key salah](screenshots/error_api_key_salah.png)
+
+### Error tidak ada koneksi
+
+![Error tidak ada koneksi](screenshots/error_tidak_ada_koneksi.png)
+
+### Error konfigurasi kosong
+
+![Error konfigurasi kosong](screenshots/error_konfigurasi_kosong.png)
 
 ## Catatan keamanan
 
