@@ -36,29 +36,7 @@ Tanpa `--dart-define-from-file`, aplikasi akan menampilkan pesan
 "Konfigurasi belum diisi" (skenario error yang memang disengaja).
 
 Jangan commit `config/env.json`. File tersebut sudah masuk `.gitignore`.
-
-## Struktur
-
-- `lib/models`: model artikel dan response.
-- `lib/services`: Dio service dan `ApiException`.
-- `lib/views`: home, pencarian, dan detail.
-- `lib/widgets`: card artikel, gambar, dan tampilan error.
-- `lib/routes`: route aplikasi.
-- `lib/utils`: warna dan format tanggal.
-
-## Testing
-
-```bash
-flutter analyze
-flutter test
-flutter build web --release --dart-define-from-file=config/env.json
-flutter build apk --debug --dart-define-from-file=config/env.json
-```
-
-Hasil terakhir: `flutter analyze` tanpa issue, 33 test lulus, build web release
-berhasil, dan APK debug berhasil dibangun. Detail pengujian ada di `TESTING.md`.
-
-## Galeri Screenshot
+## Screenshot
 
 Semua screenshot diambil dari build web release di Chrome dengan viewport
 430×932.
@@ -83,16 +61,3 @@ Semua screenshot diambil dari build web release di Chrome dengan viewport
 | Tidak ada koneksi | <a href="screenshots/08_error_offline.png"><img src="screenshots/08_error_offline.png" width="260" alt="Error tidak ada koneksi"></a> |
 | API key salah (HTTP 401) | <a href="screenshots/09_error_api_key_salah.png"><img src="screenshots/09_error_api_key_salah.png" width="260" alt="Error API key salah"></a> |
 | Konfigurasi kosong | <a href="screenshots/10_error_config_empty.png"><img src="screenshots/10_error_config_empty.png" width="260" alt="Error konfigurasi kosong"></a> |
-
-## Catatan keamanan
-
-API key development di `config/env.json` hanya untuk latihan. Untuk production,
-gunakan proxy (misalnya Cloudflare Workers) agar key tidak ikut ke APK/web bundle.
-Jika key pernah ter-commit atau terkirim ke tempat publik, rotasi key di dashboard
-GNews.
-
-## Mengganti tema
-
-Untuk memakai berita Indonesia, ubah `lang` dan `country` di
-`lib/services/news_api_service.dart` menjadi `id`, lalu sesuaikan label kategori,
-judul aplikasi, dan locale tanggal di `main.dart`.
