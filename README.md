@@ -58,23 +58,31 @@ flutter build apk --debug --dart-define-from-file=config/env.json
 Hasil terakhir: `flutter analyze` tanpa issue, 33 test lulus, build web release
 berhasil, dan APK debug berhasil dibangun. Detail pengujian ada di `TESTING.md`.
 
-## Screenshot
+## Galeri Screenshot
 
-### Daftar berita dari API
+Semua screenshot diambil dari build web release di Chrome dengan viewport
+430×932.
 
-![Daftar berita](screenshots/home_data.png)
+### Layar dan State Utama
 
-### Error API key salah (HTTP 401)
+| State | Screenshot |
+|---|---|
+| Loading | <a href="screenshots/01_loading.png"><img src="screenshots/01_loading.png" width="260" alt="Loading"></a> |
+| Daftar berita | <a href="screenshots/02_home_data.png"><img src="screenshots/02_home_data.png" width="260" alt="Daftar berita"></a> |
+| Kategori Technology | <a href="screenshots/03_category_technology.png"><img src="screenshots/03_category_technology.png" width="260" alt="Kategori Technology"></a> |
+| Dialog pencarian | <a href="screenshots/04_search_dialog.png"><img src="screenshots/04_search_dialog.png" width="260" alt="Dialog pencarian"></a> |
+| Hasil pencarian | <a href="screenshots/05_search_results.png"><img src="screenshots/05_search_results.png" width="260" alt="Hasil pencarian"></a> |
+| Detail berita | <a href="screenshots/06_detail.png"><img src="screenshots/06_detail.png" width="260" alt="Detail berita"></a> |
+| State kosong | <a href="screenshots/07_empty_state.png"><img src="screenshots/07_empty_state.png" width="260" alt="State kosong"></a> |
+| Retry berhasil | <a href="screenshots/11_retry_success.png"><img src="screenshots/11_retry_success.png" width="260" alt="Retry berhasil"></a> |
 
-![Error API key salah](screenshots/error_api_key_salah.png)
+### State Error
 
-### Error tidak ada koneksi
-
-![Error tidak ada koneksi](screenshots/error_tidak_ada_koneksi.png)
-
-### Error konfigurasi kosong
-
-![Error konfigurasi kosong](screenshots/error_konfigurasi_kosong.png)
+| Skenario | Screenshot |
+|---|---|
+| Tidak ada koneksi | <a href="screenshots/08_error_offline.png"><img src="screenshots/08_error_offline.png" width="260" alt="Error tidak ada koneksi"></a> |
+| API key salah (HTTP 401) | <a href="screenshots/09_error_api_key_salah.png"><img src="screenshots/09_error_api_key_salah.png" width="260" alt="Error API key salah"></a> |
+| Konfigurasi kosong | <a href="screenshots/10_error_config_empty.png"><img src="screenshots/10_error_config_empty.png" width="260" alt="Error konfigurasi kosong"></a> |
 
 ## Catatan keamanan
 
@@ -88,4 +96,3 @@ GNews.
 Untuk memakai berita Indonesia, ubah `lang` dan `country` di
 `lib/services/news_api_service.dart` menjadi `id`, lalu sesuaikan label kategori,
 judul aplikasi, dan locale tanggal di `main.dart`.
-# flutter_news
