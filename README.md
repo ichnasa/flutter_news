@@ -34,8 +34,6 @@ flutter run -d chrome --dart-define-from-file=config/env.json
 
 Tanpa `--dart-define-from-file`, aplikasi akan menampilkan pesan
 "Konfigurasi belum diisi" (skenario error yang memang disengaja).
-
-Jangan commit `config/env.json`. File tersebut sudah masuk `.gitignore`.
 ## Screenshot
 
 Semua screenshot diambil dari build web release di Chrome dengan viewport
